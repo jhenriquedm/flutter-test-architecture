@@ -30,4 +30,16 @@ jobs:
         run: flutter pub get
 
       - name: Executar testes automatizados
-        run: flutter test
+        run: flutter test --coverage
+
+      - name: Instalar LCOV
+        run: sudo apt-get update && sudo apt-get install -y lcov
+
+      - name: Gerar relatório HTML de cobertura
+        run: genhtml coverage/lcov.info -o coverage/html
+
+      - name: Publicar relatório de cobertura como artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/html
