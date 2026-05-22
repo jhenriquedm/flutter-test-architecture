@@ -5,7 +5,7 @@ import 'package:flutter_test_architecture/screens/login_screen.dart';
 
 void main() {
   testWidgets(
-    'Deve renderizar a tela de login corretamente',
+    'Validar se a interface inicial está sendo carregada corretamente.',
     (WidgetTester tester) async {
       print('\n==============================');
       print('INICIANDO TESTE LOGIN SCREEN');
@@ -36,7 +36,7 @@ void main() {
   );
 
   testWidgets(
-    'Deve exibir mensagem de erro ao informar email inválido',
+    'Garantir que o sistema trate credenciais inválidas.',
     (WidgetTester tester) async {
       print('\n==============================');
       print('INICIANDO TESTE LOGIN INVÁLIDO');
@@ -93,7 +93,7 @@ void main() {
   );
 
   testWidgets(
-    'Deve realizar login válido e navegar para o Dashboard',
+    'Validar autenticação correta.',
     (WidgetTester tester) async {
       print('\n==============================');
       print('INICIANDO TESTE LOGIN VÁLIDO');
@@ -150,7 +150,7 @@ void main() {
   );
 
   testWidgets(
-    'Deve realizar logout e retornar para login com campos limpos',
+    'Validar processo de logout e retorno para tela de login com campos limpos',
     (WidgetTester tester) async {
       print('\n==============================');
       print('INICIANDO TESTE DE LOGOUT');
@@ -227,7 +227,7 @@ void main() {
   );
 
   testWidgets(
-    'Deve navegar do Dashboard para o Test Runner e retornar',
+    'Validar navegação entre telas.',
     (WidgetTester tester) async {
       print('\n==============================');
       print('INICIANDO TESTE DE NAVEGAÇÃO TEST RUNNER');
